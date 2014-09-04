@@ -11,11 +11,13 @@ func main() {
 	if err != nil {
 		return
 	}
-	defer termbox.Close()
+	//defer termbox.Close()
 
 	// test for termbox.
 
 	termbox.SetCell(0, 0, 'あ', termbox.ColorWhite, termbox.ColorBlack)
+	termbox.SetCell(1, 0, 'い', termbox.ColorWhite, termbox.ColorBlack)
+	termbox.SetCell(2, 0, 'う', termbox.ColorWhite, termbox.ColorBlack)
 	termbox.Flush()
 	_ = termbox.PollEvent()
 
@@ -24,6 +26,7 @@ func main() {
 	c0 := buf[0]
 	c1 := buf[1]
 	c2 := buf[2]
+	termbox.Close()
 	fmt.Printf("w=%d h=%d\n", w, h)
 	fmt.Printf("len(buf)=%d\n", len(buf))
 	fmt.Printf("c0=%v\n", c0)
