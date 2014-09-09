@@ -10,6 +10,7 @@ func TailPath(s string) string {
 }
 
 func (ex *Ex) mainInit(av []string) error {
+	ex.ErrorPath = EXSTRINGS
 	// Defend against d's, v's, w's, and a's in directories of
 	// path leading to our true name.
 	av0 := TailPath(av[0])

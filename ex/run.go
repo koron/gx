@@ -6,7 +6,8 @@ import (
 
 type Ex struct {
 	Options
-	ProgName string
+	ProgName  string
+	ErrorPath string
 }
 
 type Options struct {
